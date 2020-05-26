@@ -1,0 +1,3 @@
+[submodule "pic-on-qiniu"]
+	path = pic-on-qiniu
+	url = https://github.com/cj1128/pic-on-qiniu
