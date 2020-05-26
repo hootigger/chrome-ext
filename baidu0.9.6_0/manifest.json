@@ -1,0 +1,32 @@
+{
+   "author": "acgotaku",
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "css": [ "css/setting.css" ],
+      "js": [ "js/jquery-2.2.3.min.js", "js/inject.js" ],
+      "matches": [ "*://pan.baidu.com/s/*", "*://yun.baidu.com/s/*", "*://pan.baidu.com/disk/home*", "*://yun.baidu.com/share/link*", "*://pan.baidu.com/share/link*", "*://yun.baidu.com/disk/home*", "*://pan.baidu.com/pcloud/album/*", "*://yun.baidu.com/pcloud/album/*" ],
+      "run_at": "document_idle"
+   }, {
+      "js": [ "js/fuck_baidu.js" ],
+      "matches": [ "*://pan.baidu.com/s/*", "*://yun.baidu.com/s/*", "*://pan.baidu.com/disk/home*", "*://yun.baidu.com/share/link*", "*://pan.baidu.com/share/link*", "*://yun.baidu.com/disk/home*", "*://pan.baidu.com/pcloud/album/*", "*://yun.baidu.com/pcloud/album/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "images/logo128.png",
+      "16": "images/logo16.png",
+      "32": "images/logo32.png",
+      "48": "images/logo48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvWh9Fz5YYWzrelVBwsDKbwrrMD1rdQ57Lga5fNACDtfvGY7a2dRPvEf5S5pl1lCYSfj6HwlabxQoVTrgFXkRy5rHwr8T/DF8oQFBgDkk03KbTE3MHUMPrZ/qIFHGNAscIWskFbgGYFvHpdbZmp7o06wuWacz0Bu79Nk0pTSAu7pwUnWih6sZycNDcXSI6027PSq1v4Xm3Pq0RWxGTUGBB9VgoZbrUZShO8Zfoem0NkWpfJNyW4+QQDWekYCO2uL7HyLN9b0rpRudHL7ARWfGejioOBsfTeBxyNbI0ruLiTn3kTH6wFSMlrEzqHPuKE5Iy9fPic8MJoP6XkGsbhAGIQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "cookies", "notifications", "*://pan.baidu.com/", "*://yun.baidu.com/", "*://pcs.baidu.com/", "activeTab", "contextMenus", "storage" ],
+   "update_url": "https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/chrome/updates.xml",
+   "version": "0.9.6",
+   "web_accessible_resources": [ "js/baidu.js", "js/convert.js" ]
+}
